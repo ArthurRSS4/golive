@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Cachorro Quente</title>
+        <style>
+
+            body{
+                padding: 30px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .vermelho{
+                color: red;
+            }
+
+            .vermelho:hover{
+                color: blue;
+                text-decoration: underline;
+            }
+
+            .azul{
+                color: blue;
+            }
+
+            #myTitle{
+                color: pink;
+            }
+
+            .myText{
+                padding: 5px;
+                padding-right: 8px;
+                padding-left: 8px;
+                border-radius: 8px;
+                outline: none;
+                border-color: aquamarine;
+                width: 300px;
+            }
+
+            .myButton{
+                padding: 5px;
+                background-color: brown;
+                color: #fff;
+                border-radius: 12px;
+            }
+
+            .myDiv{
+                background-color: #cacaca;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 12px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            }
+
+        </style>
+    </head>
+    <body>
+        <p class="vermelho">Isto é um parágrafo</p>
+        <p class="azul">Isto é um parágrafo</p>
+        <span>Isto é um span</span>
+        <span>Isto é um span</span>
+        <br />
+        <label>Isto é um label</label>
+        <label>Isto é um label</label>
+
+        <h1 class="vermelho" id="title">Isto é um título h1</h1>
+
+        <div class="myDiv">
+            
+            <input type="text" class="myText" id="myInput"/>
+            <input type="button" value="teste" class="myButton" onclick="handleText()"/>
+
+        </div>
+
+        <script>
+
+            function handleText(){
+                const pInput = document.getElementById("myInput").value;
+                const pTitulo = document.getElementById("title")
+
+                pTitulo.innerText = pInput.value
+                pInput.value = ''
+            }
+
+        </script>
+
+        
+    </body>
+</html>
